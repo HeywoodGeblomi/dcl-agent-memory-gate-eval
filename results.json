@@ -1,0 +1,89 @@
+{
+  "source": "Transcribed from DONE.md in HeywoodGeblomi/dcl-agent-memory-gate. Not a re-run. The source repo had no results JSON.",
+  "standing_key": "repo.dcl-agent-memory-gate.claim",
+  "claim_text": "toy harness: dual residual gates DCL \u03c7 on memory writes; not production.",
+  "thresholds_locked": [
+    0.04,
+    0.005,
+    0.1,
+    0.2
+  ],
+  "tracks": [
+    {
+      "id": "live_refuse",
+      "description": "dual-residual git insertions",
+      "n": 33,
+      "confirm": 0,
+      "total": 33,
+      "gated_chi": 0,
+      "frozen_chi": 0,
+      "claim": "kept",
+      "is_claim": true
+    },
+    {
+      "id": "live_git_confirm",
+      "status": "BLOCKED",
+      "reason": "insertions have \u03c3_\u0394 \u2248 0; overlay correctly refuses",
+      "is_claim": false
+    },
+    {
+      "id": "track_A_fixture_confirm",
+      "label": "fixture, not kitchen work",
+      "generator": "noisy_ramp_confirmed",
+      "T": 256,
+      "seed": 42,
+      "amp": 15,
+      "input": "as r[i], claim as value",
+      "gated": {
+        "chi": 1,
+        "flips": 139,
+        "lambda": 0.698
+      },
+      "frozen": {
+        "chi": 0,
+        "flips": 0,
+        "lambda": 0.795
+      },
+      "confirm": 143,
+      "refuse": 113,
+      "is_claim": true
+    },
+    {
+      "id": "track_B_kitchen_r_corr",
+      "label": "kitchen DCL plant r_corr, not live git, not the ramp",
+      "generator": "residual-sublation dcl_harness.realistic_residual_scenario column r_corr",
+      "T": 150,
+      "seed": 42,
+      "residual_d_y_x": "refuse (\u03c3_\u0394=0)",
+      "r_corr_owns": {
+        "classical": 0.993,
+        "sigma_delta": -0.0435
+      },
+      "gated": {
+        "chi": 1,
+        "flips": 3,
+        "lambda": 0.393
+      },
+      "frozen": {
+        "chi": 0,
+        "flips": 0,
+        "lambda": 0.801
+      },
+      "confirm": 45,
+      "refuse": 105,
+      "is_claim": true
+    },
+    {
+      "id": "audit_only_filesize_confirm",
+      "status": "demoted",
+      "is_claim": false
+    },
+    {
+      "id": "kill_b",
+      "is_claim": false
+    }
+  ],
+  "wrap": "A then B recorded. NON_CLAIMS.md still wins.",
+  "parity_trap_scoreboard": null,
+  "parity_trap_note": "demo.py can run parity_trap, but DONE.md does not record a numeric SCOREBOARD for it."
+}
